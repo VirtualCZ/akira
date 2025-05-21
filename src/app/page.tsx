@@ -24,7 +24,7 @@ export default function Home() {
           }}
         >
           Gold-fanged furry with pink horns.<br />
-          Made by with love by hand by{" "}
+          Made with love by hand by{" "}
           <a
             href="/links?amber"
             style={{ color: "#ECAE11", textDecoration: "none", fontWeight: "bold" }}
