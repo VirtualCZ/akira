@@ -1,9 +1,6 @@
-import ScrollingAkiraText from "./ScrollingAkiraText";
-
 export default function Home() {
   return (
-    <div style={{ display: "flex", width: "100%", height: "100%", alignItems: "center" }}>
-      {/* Left 35% text content */}
+    <div style={{ display: "flex", width: "100%", alignItems: "center" }}>
       <div style={{ width: "35%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
         <div
           style={{
@@ -29,10 +26,8 @@ export default function Home() {
           Gold-fanged furry with pink horns.<br />
           Made by with love by hand by{" "}
           <a
-            href="https://your-amber-link.com"
+            href="/links?amber"
             style={{ color: "#ECAE11", textDecoration: "none", fontWeight: "bold" }}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             Amber
           </a>.
@@ -48,10 +43,8 @@ export default function Home() {
         >
           Check out the{" "}
           <a
-            href="https://your-linktree-link.com"
+            href="/links"
             style={{ color: "#ECAE11", textDecoration: "none", fontWeight: "bold" }}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             link tree
           </a>

@@ -126,14 +126,17 @@ export default function RootLayout({
         <div
           className="max-w-7xl mx-auto"
           style={{
-            height: "calc(100vh - 200px)",
             overflow: "hidden",
-            padding: "80px 24px"
+            padding: "80px 24px",
+            height: "calc(100vh - 200px)",
+            display: "flex",
           }}
         >
           <main
-            className="flex flex-row h-full"
+            className="flex flex-row"
             style={{
+              height: "100%",
+              width: "100%",
             }}
           >
             {children}

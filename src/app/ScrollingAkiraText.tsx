@@ -25,7 +25,6 @@ export default function ScrollingAkiraText() {
             fontSize: "192px",
             color: "transparent",
             WebkitTextStroke: "2px #ECAE11",
-            textStroke: "2px #ECAE11",
             opacity: 1,
             animation: "akira-scroll 90s linear infinite",
             userSelect: "none",
