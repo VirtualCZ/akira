@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface SocialMediaCardProps {
     name: string;
     children: React.ReactNode;
@@ -25,10 +23,8 @@ export default function SocialMediaCard({ name, children, url }: SocialMediaCard
                 color: "inherit"
             }}
         >
-            <>
                 {children}
-                <span className="text-lg font-semibold select-none" style={{ userSelect: "none" }}>{name}</span>
-            </>
+                <p className="text-2xl font-semibold select-none" style={{ userSelect: "none" }}>{name}</p>
         </a>
     )
 }
