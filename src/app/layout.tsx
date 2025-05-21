@@ -3,6 +3,8 @@ import { Ranga, Sedgwick_Ave_Display } from "next/font/google";
 import "./globals.css";
 import ScrollingAkiraText from "./ScrollingAkiraText";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import ActiveLink from "./components/ActiveLink";
 
 const ranga = Ranga({
   weight: ["400", "700"],
@@ -26,6 +28,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
+  // If you want to use the hook, move this logic into a Client Component
+
   return (
     <html lang="en">
       <head>
@@ -40,30 +45,28 @@ export default function RootLayout({
         >
           {/* Centered navbar content container */}
           <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-            <Link
+            <ActiveLink
+              href="/"
+              className="flex items-center justify-center font-bold"
+              style={{
+                fontSize: "24px",
+                fontFamily: "Ranga, cursive",
+                height: "100%"
+              }}
+            >
+              HOME
+            </ActiveLink>
+            <ActiveLink
               href="/links"
               className="flex items-center justify-center font-bold"
               style={{
                 fontSize: "24px",
                 fontFamily: "Ranga, cursive",
-                color: "#000000",
                 height: "100%"
               }}
             >
-              Links
-            </Link>
-            <Link
-              href="/about"
-              className="flex items-center justify-center font-bold"
-              style={{
-                fontSize: "24px",
-                fontFamily: "Ranga, cursive",
-                color: "#000000",
-                height: "100%"
-              }}
-            >
-              About
-            </Link>
+              LINKS
+            </ActiveLink>
             <Link
               href="/"
               className="flex items-center justify-center"
@@ -79,30 +82,28 @@ export default function RootLayout({
                 style={{ margin: "0 auto" }}
               />
             </Link>
-            <Link
-              href="/blog"
+            <ActiveLink
+              href="/gallery"
               className="flex items-center justify-center font-bold"
               style={{
                 fontSize: "24px",
                 fontFamily: "Ranga, cursive",
-                color: "#000000",
                 height: "100%"
               }}
             >
-              Blog
-            </Link>
-            <Link
-              href="/contact"
+              GALLERY
+            </ActiveLink>
+            <ActiveLink
+              href="/abcdkockapredePlaceholder"
               className="flex items-center justify-center font-bold"
               style={{
                 fontSize: "24px",
                 fontFamily: "Ranga, cursive",
-                color: "#000000",
                 height: "100%"
               }}
             >
-              Contact
-            </Link>
+              LANGUAGES
+            </ActiveLink>
           </div>
         </nav>
         {/* Scrolling background text with akira.webp image */}
