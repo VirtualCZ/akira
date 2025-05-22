@@ -3,8 +3,8 @@ import { Ranga, Sedgwick_Ave_Display } from "next/font/google";
 import "./globals.css";
 import ScrollingAkiraText from "./ScrollingAkiraText";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import ActiveLink from "./components/ActiveLink";
+import Image from "next/image";
 
 const ranga = Ranga({
   weight: ["400", "700"],
@@ -28,8 +28,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = typeof window !== "undefined" ? window.location.pathname : "";
-  // If you want to use the hook, move this logic into a Client Component
 
   return (
     <html lang="en">
@@ -75,11 +73,15 @@ export default function RootLayout({
                 padding: 0
               }}
             >
-              <img
+              <Image
                 src="/akira.webp"
                 alt="akira"
+                width={160}
+                height={160}
+                style={{ margin: "0 auto", height: "100%", width: "auto" }}
                 className="h-[100%]"
-                style={{ margin: "0 auto" }}
+                priority
+                draggable={false}
               />
             </Link>
             <ActiveLink
@@ -111,9 +113,8 @@ export default function RootLayout({
         <ScrollingAkiraText />
         {/* Page content container */}
         <div
-          className="2xl:max-w-7xl lg:max-w-5xl md:max-w-2xl mx-auto"
+          className="2xl:max-w-7xl lg:max-w-5xl md:max-w-2xl mx-auto relative"
           style={{
-            overflow: "hidden",
             padding: "80px 24px",
             height: "calc(100vh - 200px)",
             display: "flex",
