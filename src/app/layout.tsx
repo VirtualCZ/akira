@@ -44,7 +44,7 @@ export default function RootLayout({
           className="w-full border-b border-black/[.08] dark:border-white/[.145] bg-white h-[200px] p-2"
         >
           {/* Centered navbar content container */}
-          <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+          <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-2xl mx-auto px-4 h-full flex items-center justify-between">
             <ActiveLink
               href="/"
               className="flex items-center justify-center font-bold"
@@ -111,7 +111,7 @@ export default function RootLayout({
         <ScrollingAkiraText />
         {/* Page content container */}
         <div
-          className="max-w-7xl mx-auto"
+          className="2xl:max-w-7xl lg:max-w-5xl md:max-w-2xl mx-auto"
           style={{
             overflow: "hidden",
             padding: "80px 24px",

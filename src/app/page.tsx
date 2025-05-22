@@ -1,11 +1,17 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <div style={{ display: "flex", width: "100%", alignItems: "center" }}>
-      <div style={{ width: "35%", display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
+    <div
+    className="md:flex-row flex-col"
+     style={{ display: "flex", width: "100%", alignItems: "center" }}>
+      <div
+        className="md:w-[35%] w-[100%] md:items-start items-center" 
+        style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px" }}>
         <div
+          className="2xl:text-[64px] text-[48px] items-start"
           style={{
             fontFamily: "'Ranga', cursive",
-            fontSize: "64px",
             fontWeight: "bold",
             color: "#FFFFFF",
             lineHeight: 1.1
@@ -15,9 +21,9 @@ export default function Home() {
           on the internet :3
         </div>
         <div
+          className="2xl:text-[48px] text-[32px]"
           style={{
             fontFamily: "'Ranga', cursive",
-            fontSize: "48px",
             fontWeight: "normal",
             color: "#C7C7C7",
             lineHeight: 1.2
@@ -33,9 +39,9 @@ export default function Home() {
           </a>.
         </div>
         <div
+          className="2xl:text-[32px] text-[24px]"
           style={{
             fontFamily: "'Ranga', cursive",
-            fontSize: "32px",
             fontWeight: "normal",
             color: "#C7C7C7",
             lineHeight: 1.2
@@ -52,10 +58,11 @@ export default function Home() {
       </div>
       {/* Right 65% badge and background */}
       <div
+        className="md:w-[65%] w-auto md:h-auto h-[100%]"
         style={{
           position: 'relative',
-          width: '65%',
           maxWidth: '100%',
+          maxHeight: '100%',
           aspectRatio: '1',
         }}
       >
@@ -67,18 +74,17 @@ export default function Home() {
             width: '100%',
             height: '100%',
             background: 'rgb(43, 43, 43)',
-            clipPath: 'polygon(100% 0%, 15% 0%, 0% 100%, 85% 100%)',
+            clipPath: 'polygon(90% 10%, 25% 10%, 10% 90%, 75% 90%)',
             zIndex: 0,
           }}
         />
-        <img
+        <Image
           alt="badge"
           src="/badge.webp"
-          draggable="false"
+          draggable={false}
+          fill
+          sizes="(max-width: 768px) 80vw, (max-width: 1200px) 50vw, 33vw"
           style={{
-            position: 'relative',
-            width: '100%',
-            height: '100%',
             objectFit: 'contain',
             pointerEvents: 'none',
             userSelect: 'none',
